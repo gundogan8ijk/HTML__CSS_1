@@ -22,6 +22,15 @@ a {
     text-decoration: none;
 }
 
+.heading-lv2 {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.27;
+    letter-spacing: -0.76px;
+}
+
 .btn {
     display: inline-block;
     min-width: 118px;
@@ -37,6 +46,7 @@ a {
 
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
 }
 
 .main-content {
@@ -44,6 +54,21 @@ a {
     max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
 }
 
 /* =================header================== */
@@ -109,7 +134,7 @@ a {
 
 /* ===================hero================ */
 .hero {
-    padding-top: 56px 0 65px;
+    padding: 56px 0 65px;
     background-color: #FFFCF4;
 }
 
@@ -147,7 +172,7 @@ a {
     display: flex;
 }
 
-.hero-summary .item+.item {
+.hero-sumary .item+.item {
     margin-top: 22px;
 }
 
@@ -188,7 +213,7 @@ a {
     /* 166.667% */
 }
 
-
+/* https://images.unsplash.com/photo-1592851324630-3840b392bd10?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGdpcmR8ZW58MHx8MHx8fDA%3D */
 /* ===========hero right======== */
 .hero .content-blog {
     width: 52%;
@@ -277,4 +302,131 @@ a {
 
 .hero .stats strong:nth-child(2) {
     margin-left: 28px;
+}
+
+/* ===================pupular================ */
+
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-top .desc {
+    margin-top: 16px;
+    width: 458px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.popular-top .controls {
+    display: flex;
+    gap: 18px;
+}
+
+.popular-top .control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.popular-top .control-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.popular .popular-bottom {
+    display: flex;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.popular .popular-bottom .course-item {
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #e2dfda;
+    background: #fff;
+}
+
+
+.popular .course-item:hover {
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular-bottom .course-item .thumb {
+    width: 100%;
+    height: 278px;
+    border-radius: 12px 12px 0px 0px;
+    object-fit: cover;
+    object-position: 50% 15%;
+}
+
+.popular-bottom .course-item .infor {
+    padding: 16px 22px 22px;
+}
+
+.popular-bottom .course-item .foot,
+.popular-bottom .course-item .rating,
+.popular-bottom .course-item .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .course-item .title a {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.popular-bottom .rating .value {
+
+    margin-left: 6px;
+    color: var(--primary-color);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.popular-bottom .course-item .desc {
+    margin-top: 6px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+.popular-bottom .course-item .foot {
+    margin-top: 12px;
+}
+
+
+.popular .course-item .price {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.popular .course-item .btn-book {
+    border: none;
+}
+
+.popular .course-item .btn-book:hover {
+    background-color: var(--primary-color);
 }
